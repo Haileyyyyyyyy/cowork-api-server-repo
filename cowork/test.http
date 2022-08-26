@@ -1,4 +1,4 @@
-GET http://localhost:3000/api/members/1
+GET http://localhost:3000/api/members
 
 ###
 
@@ -6,7 +6,6 @@ POST http://localhost:3000/api/members
 Content-Type: application/json
 
 {
-
     "name":"J",
     "team":"team",
     "emailAddress":"emailAdress",
@@ -14,7 +13,6 @@ Content-Type: application/json
     "admissionDate":"2020/11/21",
     "birthday":"2020/11/21",
     "profileImage":"profileImage"
-    
 }
 
 ###

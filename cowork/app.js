@@ -8,7 +8,7 @@ const { Member }=db;
 //미들웨어
 app.use(express.json());
 
-app.get('/api/members',async (req,res)=>{
+app.get('/api/members',async(req,res)=>{
     const { team }=req.query
     if(team){
         //filter -> 조건에 해당하는 요소들을 갖고 새로운 배열을 만듬
@@ -18,8 +18,6 @@ app.get('/api/members',async (req,res)=>{
         const members=await Member.findAll();
         res.send(members);
     }
-    
-
 });
 
 app.get('/api/members/:id',async(req,res)=>{
@@ -69,6 +67,7 @@ app.post('/api/members',async(req,res)=>{
     res.send(member);
 });
 
+
 app.delete('/api/members/:id',async(req,res)=>{
     const{ id }=req.params;
     const deletedCount = await Member.destroy({ where: { id } });
@@ -81,7 +80,7 @@ app.delete('/api/members/:id',async(req,res)=>{
 });
 
 
-app.listen(3000,()=>{
+app.listen(process.env.PORT||3000,()=>{
     console.log('Server is listening...')
 });
 
