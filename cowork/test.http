@@ -1,0 +1,27 @@
+GET http://localhost:3000/api/members/1
+
+###
+
+POST http://localhost:3000/api/members
+Content-Type: application/json
+
+{
+
+    "name":"J",
+    "team":"team",
+    "emailAddress":"emailAdress",
+    "phoneNumber":"phoneNumber",
+    "admissionDate":"2020/11/21",
+    "birthday":"2020/11/21",
+    "profileImage":"profileImage"
+    
+}
+
+###
+PUT http://localhost:3000/api/members/1
+Content-Type: application/json
+
+{ "team":"eeteam" }
+
+###
+DELETE http://localhost:3000/api/members/3
